@@ -85,7 +85,11 @@ export class GameScene {
                         EARTH_RADIUS * (1 - Math.cos(distance)),
                     EARTH_RADIUS * Math.sin(distance)
                 );
-                note.mesh.rotation = new Vector3(distance, 0, note.getAngle());
+                note.mesh.rotation = new Vector3(
+                    distance,
+                    0,
+                    -note.getAngle()!
+                );
                 note.mesh.visibility = 1;
             } else {
                 note.mesh.visibility = 0;
